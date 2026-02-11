@@ -3,6 +3,7 @@ import {
   FONT_FAMILY_FALLBACKS,
   CJK_HAND_DRAWN_FALLBACK_FONT,
   WINDOWS_EMOJI_FALLBACK_FONT,
+  UYGHUR_FALLBACK_FONT,
   getFontFamilyFallbacks,
   FONT_SIZES,
 } from "@excalidraw/common";
@@ -40,6 +41,7 @@ import { HelveticaFontFaces } from "./Helvetica";
 import { LiberationFontFaces } from "./Liberation";
 import { LilitaFontFaces } from "./Lilita";
 import { NunitoFontFaces } from "./Nunito";
+import { UyghurFontFaces } from "./Uyghur";
 import { VirgilFontFaces } from "./Virgil";
 import { XiaolaiFontFaces } from "./Xiaolai";
 
@@ -396,6 +398,10 @@ export class Fonts {
     // fallback font faces
     init(CJK_HAND_DRAWN_FALLBACK_FONT, ...XiaolaiFontFaces);
     init(WINDOWS_EMOJI_FALLBACK_FONT, ...EmojiFontFaces);
+
+    // Uyghur/Arabic script fallback font
+    // Registered as a special fallback for Arabic/Uyghur Unicode ranges
+    init(UYGHUR_FALLBACK_FONT, ...UyghurFontFaces);
 
     Fonts._initialized = true;
 

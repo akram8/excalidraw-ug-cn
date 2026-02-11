@@ -118,6 +118,7 @@ export const FONT_SIZES = {
 
 export const CJK_HAND_DRAWN_FALLBACK_FONT = "Xiaolai";
 export const WINDOWS_EMOJI_FALLBACK_FONT = "Segoe UI Emoji";
+export const UYGHUR_FALLBACK_FONT = "UKIJ Tor";
 
 /**
  * // TODO: shouldn't be really `const`, likely neither have integers as values, due to value for the custom fonts, which should likely be some hash.
@@ -153,6 +154,7 @@ export const FONT_FAMILY_GENERIC_FALLBACKS = {
 export const FONT_FAMILY_FALLBACKS = {
   [CJK_HAND_DRAWN_FALLBACK_FONT]: 100,
   ...FONT_FAMILY_GENERIC_FALLBACKS,
+  [UYGHUR_FALLBACK_FONT]: 200,
   [WINDOWS_EMOJI_FALLBACK_FONT]: 1000,
 };
 
@@ -178,6 +180,7 @@ export const getFontFamilyFallbacks = (
     case FONT_FAMILY.Excalifont:
       return [
         CJK_HAND_DRAWN_FALLBACK_FONT,
+        UYGHUR_FALLBACK_FONT,
         genericFallbackFont,
         WINDOWS_EMOJI_FALLBACK_FONT,
       ];

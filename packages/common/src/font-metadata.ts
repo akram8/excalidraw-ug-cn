@@ -3,7 +3,7 @@ import type {
   FontFamilyValues,
 } from "@excalidraw/element/types";
 
-import { FONT_FAMILY, FONT_FAMILY_FALLBACKS } from "./constants";
+import { FONT_FAMILY, FONT_FAMILY_FALLBACKS, UYGHUR_FALLBACK_FONT } from "./constants";
 
 /**
  * Encapsulates font metrics with additional font metadata.
@@ -129,6 +129,16 @@ export const FONT_METADATA: Record<number, FontMetadata> = {
       lineHeight: 1.25,
     },
     local: true,
+    fallback: true,
+  },
+  [FONT_FAMILY_FALLBACKS[UYGHUR_FALLBACK_FONT]]: {
+    metrics: {
+      // UKIJ Tor metrics (similar to Arabic script fonts)
+      unitsPerEm: 2048,
+      ascender: 1500,
+      descender: -500,
+      lineHeight: 1.4,
+    },
     fallback: true,
   },
 };
